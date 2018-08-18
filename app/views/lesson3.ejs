@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<% for(var i = 0;i < data.length;i++){ %>
+<div>
+  <a href="<%= data[i].href %>">
+    <img class="img" src="<%= data[i].src %>" alt="<%= data[i].alt %>">
+  </a>
+</div>
+<% } %>
+</body>
+<style>
+  .img {
+    width: 800px;
+  }
+</style>
+</html>
