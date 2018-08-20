@@ -12,6 +12,10 @@ const routers = [
   {
     path: '/lesson3',
     controller: require('./controller/lesson3')
+  },
+  {
+    path: '/lesson4',
+    controller: require('./controller/lesson4')
   }
 ]
 

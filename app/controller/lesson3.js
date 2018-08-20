@@ -1,22 +1,21 @@
 const cheerio = require('cheerio')
 const superAgent = require('superagent')
 
-const url = 'http://www.meituri.com/a/22638/4.html'
+const url = 'https://juejin.im/welcome/frontend'
 
 const lesson3 = async ctx => {
-  const items = []
+  const list = []
   const {err, res} = await superAgent.get(url)
   const $ = cheerio.load(res.text, {decodeEntities: false})
-  $('.content img').each((idx, element) => {
+  $('.entry-list .item .title').each((idx, element) => {
     const $element = $(element)
-    items.push({
-      alt: $element.attr('alt'),
-      href: $element.attr('href'),
-      src: $element.attr('src')
+    list.push({
+      title: $element.text(),
+      href: `https://juejin.im${$element.attr('href')}`
     })
   })
   await ctx.render('lesson3', {
-    data: items
+    list
   })
 }
 

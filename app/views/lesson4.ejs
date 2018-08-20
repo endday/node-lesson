@@ -6,9 +6,12 @@
 <body>
 <% for(var i = 0;i < list.length;i++){ %>
 <div>
-  <a href="<%= list[i].href %>">
-    <%= list[i].title %>
-  </a>
+  <p><%= list[i].time %></p>
+  <h4>
+    <a href="<%= list[i].href %>">
+      <%= list[i].title %>
+    </a>
+  </h4>
 </div>
 <% } %>
 </body>
