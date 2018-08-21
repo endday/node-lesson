@@ -2,6 +2,10 @@ const router = require('koa-router')()
 
 const routers = [
   {
+    path: '',
+    controller: require('./controller/home')
+  },
+  {
     path: '/lesson1',
     controller: require('./controller/lesson1')
   },

@@ -6,8 +6,7 @@ const views = require('koa-views')
 
 const app = new Koa  //创建一个APP实例
 
-
-app.use(views(path.join(__dirname, '/app/views'), {extension: 'ejs'}))
+app.use(views(path.join(__dirname, '/app/views'), { extension: 'ejs' }))
 
 app.use(logger())
 
@@ -17,4 +16,4 @@ app
 
 
 //监听端口，启动服务
-app.listen(3000)
+app.listen(process.env.PORT || 3000)

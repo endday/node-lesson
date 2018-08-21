@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<% for(var i = 0;i < routers.length;i++){ %>
+<div>
+  <p><%= routers[i].time %></p>
+  <h4>
+    <a href="<%= routers[i].path %>">
+      <%= routers[i].title %>
+    </a>
+  </h4>
+</div>
+<% } %>
+</body>
+</html>
